@@ -7,11 +7,14 @@ const WeeklyMealList = ({ weeklyMeals }) => {
   return (
     <View>
       <Text>Weekly Meals List</Text>
+      
       <FlatList
         data={weeklyMeals}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => <Text>{item}</Text>}
       />
+
+      
     </View>
   );
 };

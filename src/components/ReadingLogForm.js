@@ -1,19 +1,21 @@
 // src/components/ReadingLogForm.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { saveReadingAsync } from '../redux/thunks'; // Redux Thunk'u kullanarak sayfa sayılarını kaydetme işlemi
 
 const ReadingLogForm = () => {
+  const dispatch = useDispatch();
   const [pagesRead, setPagesRead] = useState('');
 
   const handleSavePagesRead = () => {
-    // Burada Redux Thunk'u kullanarak veriyi kaydedebilirsiniz
-    // Örnek olarak dispatch(saveReadingAsync(pagesRead));
+    dispatch(saveReadingAsync(pagesRead)); // Redux Thunk'u kullanarak sayfa sayılarını kaydediyoruz
     setPagesRead('');
   };
 
   return (
     <View>
-      <Text>Reading Log</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>Reading Log</Text>
       <TextInput
         placeholder="Enter pages read"
         value={pagesRead}

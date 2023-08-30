@@ -1,19 +1,21 @@
 // src/components/ExerciseLogForm.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { saveExerciseAsync } from '../redux/thunks'; // Örnek bir async işlemi olduğunu varsayalım
 
 const ExerciseLogForm = () => {
+  const dispatch = useDispatch();
   const [exerciseDuration, setExerciseDuration] = useState('');
 
   const handleSaveExercise = () => {
-    // Burada Redux Thunk'u kullanarak veriyi kaydedebilirsiniz
-    // Örnek olarak dispatch(saveExerciseAsync(exerciseDuration));
+    dispatch(saveExerciseAsync(exerciseDuration)); // Egzersiz süresini kaydetmek için Redux Thunk'u kullanıyoruz
     setExerciseDuration('');
   };
 
   return (
     <View>
-      <Text>Exercise Log</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>Günlük Spor</Text>
       <TextInput
         placeholder="Enter exercise duration"
         value={exerciseDuration}

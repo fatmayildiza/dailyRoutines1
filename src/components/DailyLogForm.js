@@ -1,6 +1,6 @@
 // src/components/DailyLogForm.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button,StyleSheet } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { saveMealAsync } from '../redux/thunks';
 
@@ -15,8 +15,9 @@ const DailyLogForm = () => {
 
   return (
     <View>
-      <Text>Daily Log</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>Bugün Hangi Yemeği Yaptım?</Text>
       <TextInput
+      style={StyleSheet.input}
         placeholder="Enter your meal"
         value={meal}
         onChangeText={setMeal}
@@ -27,3 +28,11 @@ const DailyLogForm = () => {
 };
 
 export default DailyLogForm;
+
+const styles = StyleSheet.create({
+  input: {
+    borderRadius:11,
+    backgroundColor:'green',
+
+  },
+})

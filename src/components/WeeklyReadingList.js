@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const WeeklyReadingList = ({ weeklyReadings }) => {
   return (
     <View>
-      <Text>Weekly Reading List</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>Weekly Reading List</Text>
       <FlatList
         data={weeklyReadings}
         keyExtractor={(item, index) => index.toString()}

@@ -1,6 +1,6 @@
 // src/components/WeeklyExerciseList.js
 import React from 'react';
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity ,StyleSheet} from 'react-native';
 import { connect } from 'react-redux';
 
 const WeeklyExerciseList = ({ weeklyExercises, navigation }) => {
@@ -29,3 +29,13 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(WeeklyExerciseList);
+
+const styles = StyleSheet.create({
+  container: {
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    backgroundColor:'blue',
+
+  },
+})
