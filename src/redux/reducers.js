@@ -29,11 +29,48 @@ const exercisesReducer = (state = [], action) => {
   }
 };
 
-// Combine your reducers using combineReducers
-const rootReducer = combineReducers({
-  meals: mealsReducer,
-  readings: readingsReducer,
-  exercises: exercisesReducer,
-});
 
-export default rootReducer;
+// Daha önceki reducer'ları buraya ekledikten sonra
+
+const weeklyReadingReducer = (state = [], action) => {
+    switch (action.type) {
+      case ADD_READING:
+        return [...state, action.payload];
+      default:
+        return state;
+    }
+  };
+  
+  const weeklyMealsReducer = (state = [], action) => {
+    switch (action.type) {
+      case ADD_MEAL:
+        return [...state, action.payload];
+      default:
+        return state;
+    }
+  };
+  
+  const weeklyExercisesReducer = (state = [], action) => {
+    switch (action.type) {
+      case ADD_EXERCISE:
+        return [...state, action.payload];
+      default:
+        return state;
+    }
+  };
+  
+  const rootReducer = combineReducers({
+    meals: mealsReducer,
+    readings: readingsReducer,
+    exercises: exercisesReducer,
+    weeklyReading: weeklyReadingReducer,
+    weeklyMeals: weeklyMealsReducer,
+    weeklyExercises: weeklyExercisesReducer,
+  });
+  
+  export default rootReducer;
+  
+
+
+
+
