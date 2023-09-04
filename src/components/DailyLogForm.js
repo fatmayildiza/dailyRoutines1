@@ -15,7 +15,7 @@ const DailyLogForm = () => {
 
   return (
     <View>
-      <Text style={{fontSize:22,fontWeight:'bold'}}>Bugün Hangi Yemeği Yaptım?</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}> What Food Did I Cook Today?</Text>
       <TextInput
       style={StyleSheet.input}
         placeholder="Enter your meal"

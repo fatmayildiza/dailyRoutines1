@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const WeeklyMealList = ({ weeklyMeals }) => {
   return (
     <View>
-      <Text>Weekly Meals List</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>Weekly Meals List</Text>
       
       <FlatList
         data={weeklyMeals}

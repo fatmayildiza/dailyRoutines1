@@ -15,7 +15,7 @@ const ExerciseLogForm = () => {
 
   return (
     <View>
-      <Text style={{fontSize:22,fontWeight:'bold'}}>Günlük Spor</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}> My Daily Sport Activity</Text>
       <TextInput
         placeholder="Enter exercise duration"
         value={exerciseDuration}

@@ -10,7 +10,7 @@ const WeeklyExerciseList = ({ weeklyExercises, navigation }) => {
 
   return (
     <View>
-      <Text>Weekly Exercise List</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>Weekly Exercise List</Text>
       <FlatList
         data={weeklyExercises}
         keyExtractor={(item, index) => index.toString()}

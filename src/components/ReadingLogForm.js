@@ -15,7 +15,7 @@ const ReadingLogForm = () => {
 
   return (
     <View>
-      <Text style={{fontSize:22,fontWeight:'bold'}}>Reading Log</Text>
+      <Text style={{fontSize:22,fontWeight:'bold'}}>My Daily Readings </Text>
       <TextInput
         placeholder="Enter pages read"
         value={pagesRead}

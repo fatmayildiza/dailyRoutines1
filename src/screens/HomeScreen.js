@@ -7,13 +7,13 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   const navigateToWeeklyMeals = () => {
-    navigation.navigate('WeeklyMeals'); // WeeklyMealsScreen'a git
+    navigation.navigate('WeeklyMeals'); 
   };
 
   return (
     <View style={styles.container}>
-      <Text>Ana Sayfa</Text>
-      <Button title="Haftalık Yemekler" onPress={navigateToWeeklyMeals} />
+      <Text>Home Page</Text>
+      <Button title=" My Weekly Meals" onPress={navigateToWeeklyMeals} />
     </View>
   );
 };
